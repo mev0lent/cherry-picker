@@ -21,8 +21,9 @@ Cherry Picker helps you prioritize and cherry-pick IP addresses for scanning, ba
 
 ## 📦 Installation
 
+Clone the repo onto your system.
+
 ```bash
-git clone https://github.com/mev0lent/cherry-picker.git
 cd cherry-picker
 pip install .
 ```
