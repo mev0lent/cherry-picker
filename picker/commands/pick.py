@@ -9,8 +9,6 @@ from picker.strategies.ttl_clustering import ttl_clustering
 from picker.utils.report import save_report
 from picker.utils.combo import apply_combined_strategies
 
-app = typer.Typer()
-
 STRATEGIES = {
     "random": random_sample,
     "heuristic": heuristic_sample,
@@ -21,7 +19,6 @@ STRATEGIES = {
     "ttl_clustering": ttl_clustering,
 }
 
-@app.command()
 def pick(
     cidr: str = typer.Argument(..., help="CIDR network block to pick IPs from, e.g., 192.168.0.0/24."),
     strategy: str = typer.Option(

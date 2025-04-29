@@ -1,8 +1,8 @@
 import typer
-from picker.commands import pick
+from picker.commands.pick import pick
 
 app = typer.Typer()
-app.add_typer(pick.app, name="pick")  # this registers `cherry-picker pick ...`
+app.command()(pick)  # ← directly registers the command function
 
 if __name__ == "__main__":
     app()
