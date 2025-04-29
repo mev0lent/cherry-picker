@@ -1,0 +1,15 @@
+[project]
+name = "cherry-picker"
+version = "1.0.0"
+description = "Smart IP selection tool for penetration testers. Efficient, extensible, and intelligent."
+authors = [
+    { name="Niklas Heringer", email="ping@niklas-heringer.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "typer>=0.9",
+]
+
+[project.scripts]
+cherry-picker = "picker.cli:app"
