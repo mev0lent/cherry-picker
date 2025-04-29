@@ -47,5 +47,12 @@ def pick(
     if output_file:
         save_report(ips, cidr, strategy, ping_check, output_file)
     else:
+        typer.secho("\n[+] === Cherry Picker Result ===", bold=True, fg=typer.colors.BRIGHT_CYAN)
+        typer.echo(f"[+] CIDR:      {cidr}")
+        typer.echo(f"[++] Strategy:  {strategy}")
+        typer.echo(f"[+++] Ping check: {'enabled' if ping_check else 'disabled'}")
+        typer.echo(f"[+++] Total IPs: {len(ips)}\n")
+
         for ip in ips:
-            print(ip)
+            typer.secho(f"• {ip}", fg=typer.colors.GREEN)
+
