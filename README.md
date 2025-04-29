@@ -6,6 +6,18 @@ Cherry Picker helps you prioritize and cherry-pick IP addresses for scanning, ba
 
 ---
 
+## ⚠️ Disclaimer
+
+This tool was developed during my studies at **University of Applied Sciences Mannheim** as part of a cybersecurity course.  
+It is provided **for educational purposes only**.
+
+**📌 No liability is assumed for any misuse or damage resulting from the use of this tool.**  
+You are solely responsible for ensuring that any scan or interaction with a network complies with all applicable laws and regulations.
+
+Never scan systems or networks without **explicit permission**.
+
+---
+
 ## ✨ Features
 
 - ✅ Random and heuristic sampling
@@ -57,26 +69,26 @@ pip install -e .
 ## 🚀 Usage
 
 ```bash
-cherry-picker pick 192.168.1.0/24 --strategy first_octet_bias --count 30
+cherry-picker --strategy first_octet_bias --count 30 192.168.1.0/24
 ```
 
 ### Combinations
 
 ```bash
-cherry-picker pick 10.0.0.0/16 --strategy "cloud_patterns:0.6+random:0.4"
+cherry-picker --strategy "cloud_patterns:0.6+random:0.4" 10.0.0.0/16
 ```
 
 ### With live ping check
 
 ```bash
-cherry-picker pick 192.168.0.0/24 --strategy entropy_reduce --ping-check
+cherry-picker 192.168.0.0/24 --strategy entropy_reduce --ping-check
 ```
 
 ### Using input files
 
 ```bash
-cherry-picker pick 10.0.0.0/16 --strategy cluster_focus --input-file alive_hosts.txt
-cherry-picker pick 192.168.1.0/24 --strategy ttl_clustering --input-file ttl_data.txt
+cherry-picker --strategy cluster_focus --input-file alive_hosts.txt 10.0.0.0/16 
+cherry-picker --strategy ttl_clustering --input-file ttl_data.txt 192.168.1.0/24
 ```
 
 ---
