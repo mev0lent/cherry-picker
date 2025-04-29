@@ -21,20 +21,36 @@ Cherry Picker helps you prioritize and cherry-pick IP addresses for scanning, ba
 
 ## 📦 Installation
 
-Clone the repo onto your system.
+> ⚠️ Requires Python 3.8+
+
+### 🔒 Recommended: Virtual Environment
+
+To keep your system clean and isolated:
 
 ```bash
+# Install virtualenv if needed
+pip install virtualenv
+
+# Create and activate environment
+virtualenv -p python3 cherry-picker-env
+source cherry-picker-env/bin/activate
+```
+
+### 🚀 Install Cherry Picker
+
+Clone the repo and install:
+
+```bash
+git clone https://github.com/yourusername/cherry-picker.git #or via ssh
 cd cherry-picker
 pip install .
 ```
 
-Or in dev mode:
+Or for development mode (auto reload when editing):
 
 ```bash
 pip install -e .
 ```
-
-> ⚠️ Requires Python 3.8+
 
 ---
 
